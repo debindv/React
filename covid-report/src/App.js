@@ -5,17 +5,15 @@ import {
 	BrowserRouter,
 	Switch,
 	Route,
-	Link
 } from 'react-router-dom';
-import State from './Components/State';
-import World from './Components/World';
-import India from './Components/India';
-import Header from './Components/Header';
+import State from './components/State';
+import World from './components/World';
+import India from './components/India';
+import Header from './components/Header';
 
 function App() {
 	return (
-    	<div className="container-fluid">
-    		
+    	<div className="container-fluid">   		
     		<BrowserRouter>
 				<Header />
 				<Switch>

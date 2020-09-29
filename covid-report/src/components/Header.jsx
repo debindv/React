@@ -9,13 +9,13 @@ import {
 function Header() {
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="#home">Covid-19</Navbar.Brand>
+            <Navbar.Brand>Covid-19 Statistics</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link className="nav-link" to="/world">World Stats</Link>
-                    <Link className="nav-link" to="/state">State Stats</Link>
-                    <Link className="nav-link" to="/india">Indian Stats</Link>
+                    <Link className="nav-link" to="/world">World Statistics</Link>
+                    <Link className="nav-link" to="/india">India Statistics</Link>
+                    <Link className="nav-link" to="/state">State Wise Statistics</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
