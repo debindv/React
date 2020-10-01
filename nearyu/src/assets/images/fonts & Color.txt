@@ -1,0 +1,7 @@
+Font - family - Product sans (Bold & Regular)
+
+color  
+green - #4CAF50
+Light black - #E9E9E9
+
+	
