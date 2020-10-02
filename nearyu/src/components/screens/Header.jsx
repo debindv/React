@@ -9,7 +9,7 @@ const Header = () => {
         <section className="wrapper">
             <Head>
                 <h1>
-                    <LinkLogo to="/"><Logo src={logo} alt="logo"/></LinkLogo>
+                    <LinkLogo to="/home"><Logo src={logo} alt="logo"/></LinkLogo>
                 </h1>
                 <Ul>
                     <Li>
