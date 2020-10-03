@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const OnSaleBottom = () => {
     return (
-        <section className="wrapper">
             <Bottom>
                 <Ul>
                     <Li>
@@ -105,7 +104,6 @@ const OnSaleBottom = () => {
                     </Li>
                 </Ul>
             </Bottom>
-        </section>
     )
 }
 

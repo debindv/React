@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import ProductViewHead from "../includes/ProductViewHead";
 import ProductViewButtons from "../includes/ProductViewButtons";
+import BackgroundImage from '../../assets/images/circle.png';
 
 const ProductView = () => {
     return (
@@ -46,7 +47,6 @@ const ProductView = () => {
                 </Bottom>
             </section>
         </View>
-        {/* <Footer /> */}
         </>
     )
 }
@@ -54,7 +54,7 @@ const ProductView = () => {
 export default ProductView;
 
 const View = styled.div`
-    background: url(../assets/images/circle.png) no-repeat;
+    background: url(${BackgroundImage}) no-repeat;
 	background-position-x: initial;
 	padding: 100px 0;
 `;

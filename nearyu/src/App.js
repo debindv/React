@@ -7,6 +7,9 @@ import Header from './components/screens/Header';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/screens/Home';
 import Products from './components/screens/Products';
+import SignUp from './components/screens/auth/SignUp';
+import Login from './components/screens/auth/Login';
+import Verification from './components/screens/auth/Verification';
 
 function App() {
     return (
@@ -18,6 +21,9 @@ function App() {
                 <Route path="/home/" component = {Home} />
                 <Route path="/productview/" component = {ProductView} />
                 <Route path="/products/" component = {Products} />
+                <Route path="/login/" component = {Login} />
+                <Route path="/signup/" component = {SignUp} />
+                <Route path="/verification/" component = {Verification} />
             </Switch>
             <Footer />
         </>

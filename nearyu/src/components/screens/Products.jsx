@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import '../../App.css';
 import { Link } from 'react-router-dom';
 import OnSaleBottom from '../includes/OnSaleBottom';
+import BackgroundImage from '../../assets/images/circle.png';
 
 const Products = () => {
     return (
@@ -82,7 +83,7 @@ export default Products;
 
 const Categories = styled.section`
     padding: 100px 0;
-    background: url(../images/circle.png) no-repeat;
+    background: url(${BackgroundImage}) no-repeat;
     background-position-x: initial;
 `;
 const Wrapper = styled.section`

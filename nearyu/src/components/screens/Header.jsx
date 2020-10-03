@@ -9,7 +9,7 @@ const Header = () => {
         <section className="wrapper">
             <Head>
                 <h1>
-                    <LinkLogo to="/home"><Logo src={logo} alt="logo"/></LinkLogo>
+                    <LinkLogo to="/home/"><Logo src={logo} alt="logo"/></LinkLogo>
                 </h1>
                 <Ul>
                     <Li>
@@ -24,13 +24,13 @@ const Header = () => {
                         </Form>
                     </Li>
                     <Li className="other">
-                        <LinkRight to="/productview" className="wishlist_button"><img src={require("../../assets/images/like.png")} alt="like" /></LinkRight>
+                        <LinkRight to="/productview/" className="wishlist_button"><img src={require("../../assets/images/like.png")} alt="like" /></LinkRight>
                     </Li>
                     <Li className="other">
-                        <LinkRight to="/productview" className="user_button"><img src={require("../../assets/images/person.png")} alt="person" /></LinkRight>
+                        <LinkRight onClick={Login}><img src={require("../../assets/images/person.png")} alt="person" /></LinkRight>
                     </Li>
                     <Li className="other">
-                        <LinkRight to="/productview" className="cart_button"><img src={require("../../assets/images/cart.png")} alt="cart" /></LinkRight>
+                        <LinkRight to="/productview/" className="cart_button"><img src={require("../../assets/images/cart.png")} alt="cart" /></LinkRight>
                     </Li>
                 </Ul>
             </Head>
@@ -45,6 +45,27 @@ const Head = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 75px 0 60px;
+    @media all and (max-width: 1280px) {
+
+    }
+    @media all and (max-width: 980px) {
+        
+    }
+    @media all and (max-width: 768px) {
+
+    }
+    @media all and (max-width: 640px) {
+
+    }
+    @media all and (max-width: 480px) {
+
+    }
+    @media all and (max-width: 360px) {
+
+    }
+    @media all and (max-width: 320px) {
+        
+    }
 `;
 const LinkLogo = styled(Link)`
     display: inline-block;
