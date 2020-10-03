@@ -4,10 +4,6 @@ import styled from 'styled-components';
 
 const Login = () => {
     return (
-        <UserLogin>
-            <Left>
-                <img src={require("../../../assets/images/logo.png")} alt="Logo" />
-            </Left>
             <Right>
                 <Top>
                     <Heading3>Welcome back</Heading3>
@@ -56,41 +52,11 @@ const Login = () => {
                     </LinkPara>
                 </SpanSignIn>
             </Right>
-        </UserLogin>
     )
 }
 
 export default Login;
 
-const UserLogin = styled.section`
-    position: fixed;
-    // top: -1000px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: #fff;
-    width: 70%;
-    max-width: 800px;
-    height: 600px;
-    z-index: 8;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    transition: ease-in-out 0.5s;
-    opacity: 1;
-    overflow: hidden;
-`;
-const Left = styled.div`
-    width: 45%;
-	background-color: #4caf50;
-	display: flex;
-    align-items: center;
-    & img {
-        display: block;
-        margin: 0 auto;
-        width: 70%;
-    }
-`;
 const  Right = styled.div`
     width: 55%;
     padding: 70px 50px 50px;

@@ -1,44 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React,{useState} from "react";
+import styled from "styled-components";
+import {Link} from "react-router-dom";
 import logo from '../../assets/images/logo.png';
-import styled from 'styled-components';
-import '../../App.css';
+import AuthMain from "./auth/AuthMain";
 
-const Header = () => {
-    return (
+export default function Header(){
+    const [showSignUp, setShowSignUp] = useState(false);
+    return(
+        <>
+        <AuthMain showSignUp={showSignUp} />
         <section className="wrapper">
-            <Head>
-                <h1>
-                    <LinkLogo to="/home/"><Logo src={logo} alt="logo"/></LinkLogo>
-                </h1>
-                <Ul>
-                    <Li>
-                        <Form action="">
-                            <Span
-                                ><img src={require("../../assets/images/search.png")} alt="search"
-                            /></Span>
-                            <Input
-                                type="text"
-                                placeholder="Search here what you need"
-                            />
-                        </Form>
-                    </Li>
-                    <Li className="other">
-                        <LinkRight to="/productview/" className="wishlist_button"><img src={require("../../assets/images/like.png")} alt="like" /></LinkRight>
-                    </Li>
-                    <Li className="other">
-                        <LinkRight onClick={Login}><img src={require("../../assets/images/person.png")} alt="person" /></LinkRight>
-                    </Li>
-                    <Li className="other">
-                        <LinkRight to="/productview/" className="cart_button"><img src={require("../../assets/images/cart.png")} alt="cart" /></LinkRight>
-                    </Li>
-                </Ul>
-            </Head>
-        </section>
+        <Head>
+            <h1>
+                <LinkLogo to="/home/"><Logo src={logo} alt="logo"/></LinkLogo>
+            </h1>
+            <Ul>
+                <Li>
+                    <Form action="">
+                        <Span
+                            ><img src={require("../../assets/images/search.png")} alt="search"
+                        /></Span>
+                        <Input
+                            type="text"
+                            placeholder="Search here what you need"
+                        />
+                    </Form>
+                </Li>
+                <Li>
+                    <LinkRight to="/productview/" className="wishlist_button"><img src={require("../../assets/images/like.png")} alt="like" /></LinkRight>
+                </Li>
+                <Li onClick={()=>setShowSignUp(!showSignUp)}>
+                    <LinkRight><img src={require("../../assets/images/person.png")} alt="person" /></LinkRight>
+                </Li>
+                <Li>
+                    <LinkRight to="/productview/" className="cart_button"><img src={require("../../assets/images/cart.png")} alt="cart" /></LinkRight>
+                </Li>
+            </Ul>
+        </Head>
+    </section>
+    </>
     )
 }
-
-export default Header;
 
 const Head = styled.header`
     display: flex;

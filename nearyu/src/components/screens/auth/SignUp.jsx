@@ -1,29 +1,19 @@
-import { React, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import AuthMain from './AuthMain';
 
-const SignUp = () => {
-    const [show, setShow] = useState(true);
-
-    const Open = () => {
-        setShow(true);
-    }
-    const Close = () => {
-        setShow(false);
-    }
+const SignUp = ({showSignUp}) => {
     return (
-        <SignIn>
-            <Left>
-                <img src={require("../../../assets/images/logo.png")} alt="Logo" />
-            </Left>
             <Right>
                 <Heading3>Create Account</Heading3>
                 <Top>
                     <Form>
-                        <Span
-                            ><img
+                        <Span>
+                            <img
                                 src={require("../../../assets/images/Icon material-person-outline.png")}
-                                alt="Person vector" /></Span>
+                                alt="Person vector" />
+                        </Span>
                         <input
                             type="text"
                             placeholder="Email/Mobile Number"
@@ -36,53 +26,24 @@ const SignUp = () => {
                 </Top>
                 <Bottom>
                     <ButtonSubmit>
-                        <LinkContinue onClick={Close}>
+                        <LinkContinue>
                             Continue
                         </LinkContinue>
                     </ButtonSubmit>
                     <Paragraph>OR</Paragraph>
-                    <Button>
-                        <LinkLogin to="/">
+                    <Button onClick={<AuthMain showSignUp={true} value="login" />}>
+                        <LinkLogin>
                             Exiting User? Log in
                         </LinkLogin>
                     </Button>
                 </Bottom>
-            </Right>
-        </SignIn>
+            </Right>   
     )
 }
 
 export default SignUp;
 
-const SignIn = styled.section`
-    position: fixed;
-    // top: -1000px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: #fff;
-    width: 90%;
-    max-width: 800px;
-    height: 600px;
-    z-index: 9;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    transition: ease-in-out 0.5s;
-    opacity: 1;
-    overflow: hidden;
-`;
-const Left = styled.div`
-    width: 45%;
-    background-color: #4caf50;
-    display: flex;
-	align-items: center;
-	&& img { 
-		display: block;
-		margin: 0 auto;
-		width: 70%;
-	}
-`;
+
 const Right = styled.div`
 	width: 55%;
 	padding: 70px 50px 50px;
@@ -129,7 +90,8 @@ const ButtonSubmit = styled.button`
 	width: 100%;
 `;
 const Button = styled.button`
-	width: 100%;
+    width: 100%;
+    display: block;
 `;
 const LinkContinue = styled(Link)`
 	display: inline-block;
@@ -144,7 +106,7 @@ const LinkContinue = styled(Link)`
 const LinkLogin = styled(Link)`
 	width: 100%;
 	text-align: center;
-	display: block;
+	display: inline-block;
 	padding: 20px 0;
 	border-radius: 40px;
 	border: 2px solid #4caf50;
