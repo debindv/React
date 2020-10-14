@@ -7,12 +7,12 @@ const Menu = () => {
     return (
         <SideMenu>
             <UlList>
-                <Li className="active"><Linked><Image src={require("../../assets/images/dashboard.png")} alt="dashboard" /><Span>Dashboard</Span></Linked></Li>
-                <Li className=""><Linked><Image src={require("../../assets/images/tickets.png")} alt="tickets" /><Span>Tickets</Span></Linked></Li>
-                <Li className=""><Linked><Image src={require("../../assets/images/support.png")} alt="support" /><Span>Support</Span></Linked></Li>
-                <Li className=""><Linked><Image src={require("../../assets/images/claim.png")} alt="claim" /><Span>Claim</Span></Linked></Li>
-                <Li className=""><Linked><Image src={require("../../assets/images/report.png")} alt="report" /><Span>Report</Span></Linked></Li>
-                <Li className=""><Linked><Image src={require("../../assets/images/jobdesk.png")} alt="jobdesk" /><Span>Jobdesk</Span></Linked></Li>
+                <Li className="active"><Linked to="/dashboard/"><Image src={require("../../assets/images/dashboard.png")} alt="dashboard" /><Span>Dashboard</Span></Linked></Li>
+                <Li className=""><Linked to="/tickets/"><Image src={require("../../assets/images/tickets.png")} alt="tickets" /><Span>Tickets</Span></Linked></Li>
+                <Li className=""><Linked to="/support/"><Image src={require("../../assets/images/support.png")} alt="support" /><Span>Support</Span></Linked></Li>
+                <Li className=""><Linked to="/claim/"><Image src={require("../../assets/images/claim.png")} alt="claim" /><Span>Claim</Span></Linked></Li>
+                <Li className=""><Linked to="/report/"><Image src={require("../../assets/images/report.png")} alt="report" /><Span>Report</Span></Linked></Li>
+                <Li className=""><Linked to="/jobdesk/"><Image src={require("../../assets/images/jobdesk.png")} alt="jobdesk" /><Span>Jobdesk</Span></Linked></Li>
                 <Li className=""><Linked to="/students/"><Image src={require("../../assets/images/mystudents.png")} alt="mystudents" /><Span>My Students</Span > </Linked></Li>
             </UlList>
 		</SideMenu>

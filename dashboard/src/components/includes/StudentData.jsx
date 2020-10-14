@@ -50,7 +50,7 @@ const Data = [
      
     {
         dp: require("../../assets/images/person6.png"),
-        name: "camlion",
+        name: "ramlion",
         profile: "5 star profile",
         mail: "camlion.tal@gmail.com",
         phone:"+9847 4365 21",
