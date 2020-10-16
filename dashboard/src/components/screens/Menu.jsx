@@ -86,6 +86,7 @@ const Li = styled.li`
 `;
 const Linked = styled(Link)`
     display: inline-block;
+    width: 100%;
     @media all and (max-width: 1280px) {
 
     }
